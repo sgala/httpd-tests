@@ -18,7 +18,7 @@ my @tests_action = (
     [ "modules/actions/action/test.xyz2",	200, 	"nada"],	# Handler for .xyz2, and virtual
 );
 
-if (have_min_apache_version('2.4.60')) {
+if (have_min_apache_version('2.4.57')) {
     push(@tests_action, (
         [ "/cgi_mod_actions/action.sh?my-file-type2:/modules/actions/action/dummy", 404],
         [ "/cgi_mod_actions/action.sh?server-status:/dne", 404],
