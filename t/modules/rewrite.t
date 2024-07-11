@@ -61,7 +61,7 @@ if (have_min_apache_version('2.4.57')) {
 my @badquery = (
    [ "/modules/rewrite/badquery/literal"                         =>  "theval"],
 );
-if (have_min_apache_version('2.4.60')) {
+if (have_min_apache_version('2.4.57')) {
     push(@badquery, (
         [ "/modules/rewrite/badquery/backref/%3ftheval"                 =>  ""],
         [ "/modules/rewrite/badquery/backref-map/%3ftheval"             =>  ""],

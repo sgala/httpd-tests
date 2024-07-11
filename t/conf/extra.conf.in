@@ -276,10 +276,10 @@
     RewriteRule ^/modules/rewrite/escaping/qsd-like/(.*) /$1? [R]
     RewriteRule ^/modules/rewrite/escaping/qsd-like-plus-qsa/(.*) /$1? [R,QSA]
     # For the following rule, UnsafeAllow3F is needed from 2.4.60 to 2.4.62 only
-    <IfVersion < 2.4.60>
+    <IfVersion < 2.4.57>
     RewriteRule ^/modules/rewrite/escaping/qsd-like-plus-qsa-qsl/(.*) /$1? [R,QSA,QSL]
     </IfVersion>
-    <IfVersion >= 2.4.60>
+    <IfVersion >= 2.4.57>
     <IfVersion > 2.4.62>
     RewriteRule ^/modules/rewrite/escaping/qsd-like-plus-qsa-qsl/(.*) /$1? [R,QSA,QSL]
     </IfVersion>
@@ -333,7 +333,7 @@
     RewriteRule ^/modules/rewrite/badquery/backref-noqsa/(.*)$ /modules/rewrite/badquery/backref?query=$1 [PT]
     RewriteRule ^/modules/rewrite/badquery/backref-noqsa-map/(.*)$ /modules/rewrite/badquery/backref?query=${lower:$1} [PT]
     RewriteRule ^/modules/rewrite/badquery/backref-qslast/(.*)/(.*)$ /modules/rewrite/badquery/backref$2?query=$1 [QSL,PT]
-    <IfVersion >= 2.4.60>
+    <IfVersion >= 2.4.57>
       RewriteRule ^/modules/rewrite/badquery/backref-optin/(.*)$ /modules/rewrite/badquery/backref$1 [PT,UnsafeAllow3F]
     </IfVersion>
 
