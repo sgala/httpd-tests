@@ -107,7 +107,7 @@ else {
 }
 
 
-if (!have_min_apache_version('2.4.61') || !have_module('mime') || !have_module('status')) {
+if (!have_min_apache_version('2.4.57') || !have_module('mime') || !have_module('status')) {
     skip("doesn't work");
 }
 else {
