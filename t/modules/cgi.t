@@ -8,7 +8,7 @@ use File::stat;
 
 my $have_apache_2 = have_apache 2;
 my $have_apache_2050 = have_min_apache_version "2.0.50";
-my $have_apache_2460 = have_min_apache_version "2.4.60";
+my $have_apache_2460 = have_min_apache_version "2.4.57";
 
 my $script_log_length = 51200;
 
@@ -113,7 +113,7 @@ if (!$have_apache_2050 || Apache::TestConfig::WINFU()) {
 }
 
 # Test for a CGI script with Transfer-Encoding: chunked
-if (1 || !$have_apache_2460 || Apache::TestConfig::WINFU()) {
+if (!$have_apache_2460 || Apache::TestConfig::WINFU()) {
     delete @test{qw(bogus-te.sh)};
 }
 
