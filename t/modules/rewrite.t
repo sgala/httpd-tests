@@ -92,7 +92,7 @@ my @prefixstats = (
                 .Apache::Test::vars('serverroot')."/conf/core.conf" =>  404],
 );
 
-if (have_min_apache_version('2.4.60')){
+if (have_min_apache_version('2.4.57')){
     push(@prefixstats, (
         [ "/modules/rewrite/prefixstat/query-optin/index.html?"
                 .Apache::Test::vars('serverroot')."/conf/core.conf" =>  200],

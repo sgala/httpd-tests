@@ -316,7 +316,7 @@
       # If the prefix stat fails, it would become docroot-relative and 404. Note the at-serverroot is a literal in the generated httpd.conf
       RewriteRule ^/modules/rewrite/prefixstat/index.html @SERVERROOT@/htdocs/index.html
       RewriteRule ^/modules/rewrite/prefixstat/query/index.html %{QUERY_STRING}
-      <IfVersion >= 2.4.60>
+      <IfVersion >= 2.4.57>
         RewriteRule ^/modules/rewrite/prefixstat/query-optin/index.html %{QUERY_STRING} [UnsafePrefixStat]
       </IfVersion>
    </VirtualHost>
