@@ -55,6 +55,10 @@ my %test = (
         'rc' => 502,
         'expect' => 'none'
     },
+    'nph-bogus-te.sh' => {
+        'rc' => 502,
+        'expect' => 'none'
+    },
     'acceptpathinfoon.sh' => {
         'rc' => 200,
         'expect' => ''
